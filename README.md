@@ -1,1 +1,1 @@
-# fantasy-hockey-optimization
+# Fantasy Hockey Lineup Optimization
