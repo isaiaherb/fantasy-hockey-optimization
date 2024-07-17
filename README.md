@@ -11,6 +11,10 @@ We'd like to determine the Draft Kings fantasy hockey lineup that optimizes the 
 - Season Statistics
   - skaters.csv – Data from the NHL season (October 7, 2022 through Feb 10, 2023) related to skaters.
   - goalies.csv - Data from the NHL season (October 7, 2022 through Feb 10, 2023) related to goalies.
+## Results
+Lineup: x[Boone Jenner]	x[Artemi Panarin]	x[Nick Schmaltz]	x[Morgan Rielly]	x[Pheonix Copley]	x[Juuso Valimaki]	x[Anze Kopitar]	x[Clayton Keller]	x[Adrian Kempe]	
+Total Points: 311.8	
+Salary Cap: $50,000
 ## Conclusions
 ### Tactical Information
 When it came to determining the optimal lineup using the season data, I found that the total points for the lineup while satisfying each of the constraints was 22,512.4. When analyzing the slack for the constraints, I found that there was no slack for either the player or salary constraints, meaning the entire 50,000 was used. When performing sensitivity analysis, testing a range of 40,000 to 60,000, the total points almost directly linearly correlated with the salary increase, which indicates that the lineup changed each time the salary was incremented.
