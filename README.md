@@ -11,3 +11,16 @@ We'd like to determine the Draft Kings fantasy hockey lineup that optimizes the 
 - Season Statistics
   - skaters.csv – Data from the NHL season (October 7, 2022 through Feb 10, 2023) related to skaters.
   - goalies.csv - Data from the NHL season (October 7, 2022 through Feb 10, 2023) related to goalies.
+## Conclusions
+### Tactical Information
+When it came to determining the optimal lineup using the season data, I found that the total points for the lineup while satisfying each of the constraints was 22,512.4. When analyzing the slack for the constraints, I found that there was no slack for either the player or salary constraints, meaning the entire 50,000 was used. When performing sensitivity analysis, testing a range of 40,000 to 60,000, the total points almost directly linearly correlated with the salary increase, which indicates that the lineup changed each time the salary was incremented.
+
+After checking rubric and seeing that average total points per game was required for the season data problem instead of a total, I found that the lineup above was most optimal, producing 486.58 points. However, when re-calculating the slack for the salary constraint, there was 600 unused dollars in the budget, meaning that the full 50,000 was not optimized. While this solution stays in line with the rubric, I think my first solution, the one that calculates total points instead of total points per game, was the best.
+
+### Strategic Information
+Regarding the actual game data that was used in M2, we determined the lineup listed above was the most optimal, yielding 311.8 points and satisfying all of the constraints. When performing sensitivity analysis, the first thing that stuck out to me was that the salary constraint was 10,100 less than the allowed salary cap. However, when I tested a salary cap range from 40,000 to 60,000, the lineup remained the same from 50,000 to 60,000. This means that either the optimal lineup determined earlier in the problem was the best possible and there was simply no need to spend any more money, or there was an issue somewhere else in the problem that I didn't catch.
+
+## Limitations, Improvements, and Challenges
+One of the first observations I made was that there may be a better way of predicting the optimal lineup instead of total points. Maybe take into account time played or other statistics that someone with knowledge of the sport would be wary of. This extra information might increase the accuracy of the model or produce a more optimal lineup.
+
+My ideal sensitivity analysis would have had the player positions as the column names, which would better show the changes in lineup as the salary cap went up. However I couldn't find out how to assign the positions to the column names and keep them consistent with the positions of the players in each lineup. I would've also liked to include total points per player, team, and position in the sensitivity analysis dataframe, but I couldn't figure out how to make a dictionary that included multiple values per key without wrecking the entire model. Maybe, given more time, I'd be able to make some of these changes.
