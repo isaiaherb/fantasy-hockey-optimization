@@ -1,6 +1,6 @@
-# Fantasy Hockey Lineup Optimization Using PE Concrete Model
+# Fantasy Hockey Lineup Optimization
 ## Description
-This project, completed for my optimization modeling course, uses 
+This project, completed for my optimization modeling course, uses pyomo
 ## Data
 •	DKSalaries.csv – Data from Draftkings website including player names, teams, salary, position, and average points per game. 
 •	Actual game data from Feb 11, 2023
